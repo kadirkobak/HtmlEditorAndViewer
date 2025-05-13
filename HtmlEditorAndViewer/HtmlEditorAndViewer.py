@@ -28,18 +28,20 @@ def index():
                 }
                 .container {
                     display: flex;
-                    width: 90%;
-                    height: 80%;
-                    max-width: 1400px;
+                    width: 95%;
+                    height: 90%;
+                    max-width: 1500px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     border-radius: 8px;
                     overflow: hidden;
                     background-color: #fff;
                 }
                 .editor {
-                    flex: 1;
+                    flex: 2;
                     padding: 20px;
                     border-right: 2px solid #ddd;
+                    display: flex;
+                    flex-direction: column;
                 }
                 .preview {
                     flex: 1;
