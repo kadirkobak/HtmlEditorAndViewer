@@ -25,31 +25,28 @@ def index():
                     align-items: center;
                     height: 100vh;
                     margin: 0;
+                    overflow: hidden;
                 }
                 .container {
                     display: flex;
-                    width: 95%;
-                    height: 90%;
-                    max-width: 1500px;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     border-radius: 8px;
-                    overflow: hidden;
                     background-color: #fff;
                 }
-                .editor {
-                    flex: 2;
-                    padding: 20px;
-                    border-right: 2px solid #ddd;
-                    display: flex;
-                    flex-direction: column;
-                    resize: horizontal;
-                    overflow: auto;
-                    min-width: 400px; /* Minimum width */
-                    max-width: 80%; /* Maximum width */
-                }
-                .preview {
+                .editor, .preview {
                     flex: 1;
                     padding: 20px;
+                    height: 100%;
+                    box-sizing: border-box;
+                    overflow: auto;
+                }
+                .editor {
+                    border-right: 2px solid #ddd;
+                    resize: horizontal;
+                    min-width: 300px; /* Minimum width */
                 }
                 textarea {
                     width: 100%;
