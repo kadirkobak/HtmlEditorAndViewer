@@ -28,22 +28,22 @@ def index():
                 }
                 .container {
                     display: flex;
-                    width: 80%;
+                    width: 90%;
                     height: 80%;
+                    max-width: 1400px;
                     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                     border-radius: 8px;
                     overflow: hidden;
+                    background-color: #fff;
                 }
                 .editor {
                     flex: 1;
                     padding: 20px;
-                    background-color: #fff;
                     border-right: 2px solid #ddd;
                 }
                 .preview {
                     flex: 1;
                     padding: 20px;
-                    background-color: #fff;
                 }
                 textarea {
                     width: 100%;
@@ -54,12 +54,13 @@ def index():
                     border-radius: 4px;
                     font-family: 'Courier New', monospace;
                     background-color: #f9f9f9;
+                    resize: none;
                 }
                 button {
                     background-color: #4CAF50;
                     color: white;
                     border: none;
-                    padding: 10px 15px;
+                    padding: 12px 16px;
                     font-size: 16px;
                     border-radius: 4px;
                     cursor: pointer;
@@ -90,8 +91,8 @@ def index():
                 <div class="editor">
                     <h2>HTML Editor</h2>
                     <form method="POST">
-                        <textarea name="html_code" placeholder="HTML kodunuzu buraya yazın...">{{ html_code }}</textarea>
-                        <button type="submit" id="previewButton">Görüntüle</button>
+                        <textarea name="html_code" placeholder="Write your HTML code here...">{{ html_code }}</textarea>
+                        <button type="submit" id="previewButton">Preview</button>
                     </form>
                 </div>
 
@@ -106,10 +107,10 @@ def index():
 
             <script>
                 document.getElementById('previewButton').addEventListener('click', function(event) {
-                    event.preventDefault(); // Formun otomatik olarak gönderilmesini engeller.
+                    event.preventDefault(); // Prevents automatic form submission
                     const htmlCode = document.querySelector('textarea[name="html_code"]').value;
                     const iframe = document.getElementById('previewIframe');
-                    iframe.srcdoc = htmlCode; // Iframe'in içeriğini günceller.
+                    iframe.srcdoc = htmlCode; // Updates iframe content
                 });
             </script>
         </body>
