@@ -42,6 +42,10 @@ def index():
                     border-right: 2px solid #ddd;
                     display: flex;
                     flex-direction: column;
+                    resize: horizontal;
+                    overflow: auto;
+                    min-width: 400px; /* Minimum width */
+                    max-width: 80%; /* Maximum width */
                 }
                 .preview {
                     flex: 1;
