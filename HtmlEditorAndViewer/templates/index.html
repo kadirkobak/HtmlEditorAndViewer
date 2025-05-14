@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Editor & Preview</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+    <div class="container">
+       
+        <div class="editor">
+            <h2>HTML Editor</h2>
+            <form method="POST">
+                <textarea name="html_code" placeholder="Write your HTML code here...">{{ html_code }}</textarea>
+                <button type="submit" id="previewButton">Preview</button>
+            </form>
+        </div>
+
+       
+        <div class="preview">
+            <h2>Preview</h2>
+            <div class="preview-box">
+                <iframe id="previewIframe"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
